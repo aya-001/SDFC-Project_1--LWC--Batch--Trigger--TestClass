@@ -12,12 +12,12 @@ import oppSearchList from '@salesforce/apex/LwcOpportunitySearchController.oppSe
 let FIELD = ['Opportunity.OpportunityKBN__c', OPP_OWNER , ACCOUNT_NAME];//商談区分取得
 
 const columns = [//html表示用
-        { label: '商談名', fieldName: 'Name' },
-        { label: 'フェーズ', fieldName: 'StageName' },
-        { label: '金額', fieldName: 'Amount', type: 'currency' },
-        { label: '取引先名', fieldName: 'AccountId' },
-        { label: '所有者名', fieldName: 'OwnerId' },
-        { label: '商談区分', fieldName: 'OpportunityKBN__c' }
+        { label: 'Opportinity Name', fieldName: 'Name' },
+        { label: 'Stage Name', fieldName: 'StageName' },
+        { label: 'Amount', fieldName: 'Amount', type: 'currency' },
+        { label: 'Account Name', fieldName: 'AccountId' },
+        { label: 'Owner Name', fieldName: 'OwnerId' },
+        { label: 'Opportuinty Clarification', fieldName: 'OpportunityKBN__c' }
 ]; 
 
 
