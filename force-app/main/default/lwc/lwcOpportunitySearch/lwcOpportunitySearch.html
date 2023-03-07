@@ -1,11 +1,11 @@
 <template>
-<lightning-card title="商談検索画面" icon-name="custom:custom63">
+<lightning-card title="Opportunity Search" icon-name="custom:custom63">
         <lightning-layout multiple-rows="true" vertical-align="end">
-                <lightning-layout-item size="4" padding="around-small"><!--選択リスト-->
+                <lightning-layout-item size="4" padding="around-small"><!--Picklist-->
                                 <template if:true={stageNameOptions.data}> <!--stageNameOptions.data.value-->
                                         <lightning-combobox 
                                         class="classTest1"
-                                        label="フェーズ" 
+                                        label="Stage Name" 
                                         placeholder="Select Progress"
                                         value={value}  
                                         options={_hasPicklistValues} 
@@ -13,14 +13,14 @@
                                 </lightning-combobox><!--stageNameOptions.data.value-->
                                 </template>
                 </lightning-layout-item>
-                <lightning-layout-item size="4" padding="around-small"><!--商談名入力-->
-                        <lightning-input class="classTest2" type="text" label="商談名" value={value}>
+                <lightning-layout-item size="4" padding="around-small"><!--Name of Opportunty-->
+                        <lightning-input class="classTest2" type="text" label="Opportunity Name" value={value}>
                 </lightning-input>
                 </lightning-layout-item>
-                <lightning-layout-item size="2" padding="around-small"><!--検索ボタン-->
-                        <lightning-button name="search" type="submit" label="検索" onclick={handleSearch} variant="brand"></lightning-button>
+                <lightning-layout-item size="2" padding="around-small"><!--Search Button-->
+                        <lightning-button name="search" type="submit" label=" Search " onclick={handleSearch} variant="brand"></lightning-button>
                 </lightning-layout-item>
-                <lightning-layout-item size="12" padding="around-small"><!--検索結果-->
+                <lightning-layout-item size="12" padding="around-small"><!--Search Result-->
                         <lightning-datatable
                         key-field="Id"
                         data={opportunities}
