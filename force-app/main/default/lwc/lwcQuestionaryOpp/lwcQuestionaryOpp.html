@@ -2,32 +2,32 @@
     <!--非該当の際、非表示-->
     <lightning-tabset>
         <template for:each={dataList} for:item="list">
-            <lightning-tab label="満足度Record" key={list}>
-                <lightning-card title="満足度調査" icon-name="standard:record">
+            <lightning-tab label="survay Satisfaction" key={list}>
+                <lightning-card title="survay Satisfaction" icon-name="standard:record">
                     <div class="slds-m-around_medium">
                         <div>
-                            <p>商談名：{oppName}</p>
+                            <p>Opportunity Name：{oppName}</p>
                             <input class="classTest3" type="hidden" name="satis" value={list.Id}>
-                            <!--満足度ID-->
+                            <!--survay SatisfactionID-->
                         </div>
                         <lightning-layout-item size="4" padding="around-small">
                             <template if:true={satisfactiobOptions.data}>
-                                <lightning-combobox class="classTest1" label="満足度 ※入力必須" placeholder="Select"
+                                <lightning-combobox class="classTest1" label="Satisfaction ※Mandatory to fill" placeholder="Select"
                                     value={value} options={_hasPicklistValues} name="progress" required>
                                 </lightning-combobox>
                             </template>
                         </lightning-layout-item>
                         <div>
-                            <p>回答期限：{list.Deadline__c}</p>
+                            <p>Due Date to answer：{list.Deadline__c}</p>
                             <input type="hidden" name="duedate" value={list.Deadline__}>
-                            <!--満足度ID-->
+                            <!--Satisfaction ID-->
                         </div>
                         <lightning-layout-item size="4" padding="around-small">
-                            <lightning-input class="classTest2" value={list.Comment__c} label="コメント">
+                            <lightning-input class="classTest2" value={list.Comment__c} label="Comment">
                             </lightning-input>
                         </lightning-layout-item>
                         <br>
-                        <lightning-button label="保存" variant="brand" onclick={validationCheck}>
+                        <lightning-button label="Save" variant="brand" onclick={validationCheck}>
                             <template if:false={loaded}>
                                 <lightning-spinner alternative-text="Loading..." variant="brand"></lightning-spinner>
                             </template>
