@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="商談一覧" icon-name="custom:custom63">
+            <div class="slds-m-around_medium">
+                    <lightning-datatable
+                            key-field="Id"
+                            data={records}
+                            columns={columns}
+                            hide-checkbox-column="true"
+                            show-row-number-column="true">
+                    </lightning-datatable>
+            </div>
+    </lightning-card>
+</template>

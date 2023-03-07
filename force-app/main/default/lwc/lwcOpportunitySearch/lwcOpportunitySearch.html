@@ -1,0 +1,33 @@
+<template>
+<lightning-card title="商談検索画面" icon-name="custom:custom63">
+        <lightning-layout multiple-rows="true" vertical-align="end">
+                <lightning-layout-item size="4" padding="around-small"><!--選択リスト-->
+                                <template if:true={stageNameOptions.data}> <!--stageNameOptions.data.value-->
+                                        <lightning-combobox 
+                                        class="classTest1"
+                                        label="フェーズ" 
+                                        placeholder="Select Progress"
+                                        value={value}  
+                                        options={_hasPicklistValues} 
+                                        name="progress">
+                                </lightning-combobox><!--stageNameOptions.data.value-->
+                                </template>
+                </lightning-layout-item>
+                <lightning-layout-item size="4" padding="around-small"><!--商談名入力-->
+                        <lightning-input class="classTest2" type="text" label="商談名" value={value}>
+                </lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="2" padding="around-small"><!--検索ボタン-->
+                        <lightning-button name="search" type="submit" label="検索" onclick={handleSearch} variant="brand"></lightning-button>
+                </lightning-layout-item>
+                <lightning-layout-item size="12" padding="around-small"><!--検索結果-->
+                        <lightning-datatable
+                        key-field="Id"
+                        data={opportunities}
+                        columns={columns}
+                        hide-checkbox-column="true">
+                        </lightning-datatable>
+                </lightning-layout-item>
+        </lightning-layout>
+ </lightning-card>
+</template>

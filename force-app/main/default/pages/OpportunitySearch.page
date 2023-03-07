@@ -1,0 +1,27 @@
+<apex:page standardController="Opportunity" extensions="OpportunitySearchController"  lightningStylesheets="true">
+<apex:pageMessages/>
+<apex:form>
+<apex:pageBlock title="商談検索画面">
+
+<apex:outputLabel value="フェーズ: " />
+<apex:selectList value="{!oppStage}" size="1"><!--フェーズ選択-->
+    <apex:selectOptions value="{!oppStageName}"/> <!--<apex:selectList> コンポーネントに対応-->
+   <!-- <apex:actionSupport action="{!getDetails}"event="onchange" rerender="display"/> --><!--ボタンのクリック等特定のイベントの発生時非同期にコンポーネントを更新,onchangeイベントで変更した値を取得-->
+</apex:selectList>    
+<apex:outputLabel value="  商談名: " />
+<apex:inputText value = "{!srchKeyword}"/>
+<apex:commandButton action="{!searchListOpp}" value="検索"/>
+
+<apex:pageBlockTable value="{!getDetails}" var="opp">
+    <apex:column value="{!opp.Name}"/> 
+    <apex:column value="{!opp.StageName}"/> 
+    <apex:column value="{!opp.Amount}"/> 
+    <apex:column value="{!opp.AccountId}"/>
+    <apex:column value="{!opp.OwnerId}"/>
+    <apex:column value="{!opp.OpportunityKBN__c}"/>
+</apex:pageBlockTable>
+
+
+</apex:pageBlock>
+</apex:form>
+</apex:page>

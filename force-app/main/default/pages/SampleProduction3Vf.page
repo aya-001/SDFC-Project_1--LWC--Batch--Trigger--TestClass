@@ -1,0 +1,6 @@
+<apex:page controller="SampleProduction3VfController">
+    <apex:form>
+        <apex:outputText value="{!acc.Name}" />
+        <apex:commandbutton value="画面移動" action="{!moveDetailPage}" />
+    </apex:form>
+</apex:page>

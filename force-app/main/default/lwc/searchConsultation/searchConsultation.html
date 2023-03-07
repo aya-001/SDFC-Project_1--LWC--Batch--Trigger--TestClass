@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="診断検索画面">
+
+    <lightning-layout>
+        <lightning-layout-item padding="around-small" size="4">
+        <template if:true={DiseaseNameOptions.data}>
+        <lightning-combobox
+            class="classTest1"
+            label="診断病名"
+            name="DiseaseName__c"
+            options={_DiseaseNameOptions}
+            data-field-name="DiseaseName__c"
+            value={value}
+            onchange={handleChange}
+            data-id="DiseaseName__c"></lightning-combobox>
+        </template>
+        </lightning-layout-item>
+    </lightning-layout>
+    <lightning-datatable
+                key-field="id"
+                data={data}
+                columns={columns}
+                hide-checkbox-column
+                >
+    </lightning-datatable>
+
+    </lightning-card>
+</template>
