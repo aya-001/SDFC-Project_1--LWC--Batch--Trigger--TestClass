@@ -3,6 +3,7 @@ trigger OpportunityTrigger on Opportunity (after insert, after update, before de
     //OpportunityTriggerHandller handler = new OpportunityTriggerHandller();
     //ToDoMakeTriggerHandller handlers = new ToDoMakeTriggerHandller();//インスタンス
     //OppDeleteTriggerHandller deleteHandler = new OppDeleteTriggerHandller();
+    //相反するためコメントアウトしています
     
     if(Trigger.isAfter && Trigger.isInsert|| Trigger.isAfter && Trigger.isUpdate) {
         
