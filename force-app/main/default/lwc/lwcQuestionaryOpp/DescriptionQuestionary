@@ -1,0 +1,5 @@
+When a Opportunity is won, a questionnaire appears on the Opportuinty record page. 
+participants fill out a questionnaire. 
+(The LWC screen starts up after the Save button is clicked.) 
+Can update the records where the due date has been entered but the satisfaction level has not been registered. 
+(Multiple records are displayed). 
